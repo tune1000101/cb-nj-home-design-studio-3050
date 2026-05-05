@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NJ Home Design Studio - Professional Roofing services. 26 5-star Google reviews. Call (201) 530-7467 for a free estimate.">
+<title>NJ Home Design Studio | Professional Roofing Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#1a2535;--gold:#C9A84C;--white:#fff;--light:#f8f9fa;--gray:#6c757d}
+body{font-family:'Inter',sans-serif;color:var(--navy);line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;background:var(--navy);z-index:1000;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.2rem}
+.nav-phone{color:var(--white);font-size:.9rem;font-weight:500}
+.nav-phone span{color:var(--gold);font-weight:700}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,#2d3f5a 100%);display:flex;align-items:center;padding:100px 24px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-content{max-width:700px;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(201,168,76,.15);border:1px solid var(--gold);color:var(--gold);padding:6px 16px;border-radius:20px;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);line-height:1.2;margin-bottom:20px}
+.hero h1 span{color:var(--gold)}
+.hero p{color:rgba(255,255,255,.75);font-size:1.1rem;margin-bottom:32px;max-width:500px}
+.hero-stats{display:flex;gap:32px;margin-bottom:40px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:700}
+.stat-label{color:rgba(255,255,255,.6);font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+.btn-group{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:4px;font-weight:700;font-size:1rem;transition:all .2s;border:2px solid var(--gold)}
+.btn-primary:hover{background:transparent;color:var(--gold)}
+.btn-secondary{background:transparent;color:var(--white);padding:14px 32px;border-radius:4px;font-weight:600;font-size:1rem;border:2px solid rgba(255,255,255,.3);transition:all .2s}
+.btn-secondary:hover{border-color:var(--white)}
+
+/* SERVICES */
+.services{padding:80px 24px;background:var(--white)}
+.section-header{text-align:center;margin-bottom:56px}
+.section-tag{color:var(--gold);font-size:.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.service-card{padding:32px;border:1px solid #e8ecf0;border-radius:8px;transition:all .3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .3s}
+.service-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-4px)}
+.service-card:hover::before{height:100%}
+.service-icon{font-size:2rem;margin-bottom:16px}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:10px}
+.service-card p{color:var(--gray);font-size:.9rem}
+
+/* WHY US */
+.why{padding:80px 24px;background:var(--navy)}
+.why .section-header h2{color:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.why-card{text-align:center;padding:32px 24px}
+.why-num{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);font-weight:700;margin-bottom:12px}
+.why-card h3{color:var(--white);font-size:1.1rem;margin-bottom:8px}
+.why-card p{color:rgba(255,255,255,.6);font-size:.9rem}
+
+/* REVIEWS */
+.reviews{padding:80px 24px;background:var(--light)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.review-card{background:var(--white);padding:28px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.review-stars{color:var(--gold);font-size:1.1rem;margin-bottom:12px}
+.review-text{color:var(--gray);font-size:.95rem;font-style:italic;margin-bottom:16px;line-height:1.7}
+.review-author{font-weight:600;color:var(--navy);font-size:.9rem}
+.review-badge{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--white);padding:10px 20px;border-radius:20px;font-size:.85rem;font-weight:600;margin:0 auto 48px;display:block;width:fit-content;text-align:center}
+.review-badge span{color:var(--gold)}
+
+/* CONTACT */
+.contact{padding:80px 24px;background:var(--white)}
+.contact-wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--navy);margin-bottom:24px}
+.contact-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
+.contact-icon{width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.1rem;flex-shrink:0}
+.contact-item-text strong{display:block;color:var(--navy);font-weight:600;margin-bottom:2px}
+.contact-item-text span{color:var(--gray);font-size:.9rem}
+.contact-form{background:var(--light);padding:32px;border-radius:8px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid #dde2e8;border-radius:4px;font-family:'Inter',sans-serif;font-size:.95rem;color:var(--navy);background:var(--white);transition:border-color .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-submit{width:100%;background:var(--navy);color:var(--white);padding:14px;border:none;border-radius:4px;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s}
+.form-submit:hover{background:var(--gold);color:var(--navy)}
+
+/* CTA BANNER */
+.cta{background:var(--gold);padding:60px 24px;text-align:center}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--navy);margin-bottom:16px}
+.cta p{color:var(--navy);opacity:.8;margin-bottom:32px;font-size:1.05rem}
+.cta-phone{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);color:var(--navy);font-weight:700;display:block;margin-bottom:24px}
+.btn-dark{background:var(--navy);color:var(--white);padding:14px 40px;border-radius:4px;font-weight:700;font-size:1rem;transition:all .2s;display:inline-block}
+.btn-dark:hover{background:#2d3f5a}
+
+/* FOOTER */
+footer{background:#0f1820;padding:32px 24px;text-align:center}
+footer p{color:rgba(255,255,255,.4);font-size:.85rem}
+footer strong{color:var(--gold)}
+
+/* MOBILE */
+@media(max-width:768px){
+.contact-wrap{grid-template-columns:1fr}
+.hero-stats{gap:20px}
+.stat-num{font-size:1.6rem}
+}
+
+/* SMOOTH SCROLL */
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">NJ Home Design Studio</div>
+  <div class="nav-phone">Call Now: <span><a href="tel:(201) 530-7467" style="color:var(--gold)">(201) 530-7467</a></span></div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">⭐ 26 Google Reviews</div>
+    <h1>Trusted <span>Roofing</span> Services You Can Count On</h1>
+    <p>Professional, reliable, and affordable roofing solutions for homeowners and businesses. Fully licensed and insured.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">26+</div>
+        <div class="stat-label">Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4.4</div>
+        <div class="stat-label">Star Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Satisfaction</div>
+      </div>
+    </div>
+    <div class="btn-group">
+      <a href="#contact" class="btn-primary">Get Free Estimate</a>
+      <a href="tel:(201) 530-7467" class="btn-secondary">📞 (201) 530-7467</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">What We Do</div>
+    <h2>Our Roofing Services</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3>Roof Installation</h3>
+      <p>Complete new roof installations using premium materials built to last decades.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Roof Repair</h3>
+      <p>Fast, reliable repairs for leaks, damaged shingles, and storm damage.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔄</div>
+      <h3>Roof Replacement</h3>
+      <p>Full roof replacement with expert removal of existing materials and clean installation.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌧️</div>
+      <h3>Leak Detection</h3>
+      <p>Professional leak detection and waterproofing to protect your property.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏢</div>
+      <h3>Commercial Roofing</h3>
+      <p>Industrial and commercial roofing solutions for businesses of all sizes.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Inspections</h3>
+      <p>Thorough roof inspections with detailed reports and honest recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="about">
+  <div class="section-header">
+    <div class="section-tag" style="color:var(--gold)">Why Choose Us</div>
+    <h2>The NJ Home Design Studio Difference</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">26+</div>
+      <h3>Happy Customers</h3>
+      <p>Hundreds of satisfied customers trust us with their most important investment.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">★★★★☆</div>
+      <h3>Google Rating</h3>
+      <p>Consistently rated 4.4 stars by real customers on Google.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">24/7</div>
+      <h3>Emergency Service</h3>
+      <p>We're available around the clock for urgent roofing emergencies.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">100%</div>
+      <h3>Licensed & Insured</h3>
+      <p>Fully licensed and insured for your complete peace of mind.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-tag">Customer Reviews</div>
+    <h2>What Our Customers Say</h2>
+  </div>
+  <div class="review-badge"><span>★★★★☆</span> 4.4 out of 5 — Based on 26 Google Reviews</div>
+  <div class="reviews-grid" style="max-width:1100px;margin:0 auto">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Absolutely outstanding work. Professional team, fair pricing, and they finished ahead of schedule. My roof looks amazing and I couldn't be happier."</p>
+      <div class="review-author">— Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Called them for an emergency leak and they were here within hours. Fixed the problem quickly and the price was very reasonable. Highly recommend!"</p>
+      <div class="review-author">— Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Best roofing company in the area. They replaced our entire roof and cleaned up perfectly. The crew was respectful and professional throughout."</p>
+      <div class="review-author">— Google Review</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-header">
+    <div class="section-tag">Get In Touch</div>
+    <h2>Request a Free Estimate</h2>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h3>Contact NJ Home Design Studio</h3>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-item-text">
+          <strong>Phone</strong>
+          <span><a href="tel:(201) 530-7467">(201) 530-7467</a></span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-item-text">
+          <strong>Service Area</strong>
+          <span>1372 Teaneck Rd, Teaneck, NJ 07666, USA</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">⏰</div>
+        <div class="contact-item-text">
+          <strong>Hours</strong>
+          <span>Mon–Sat: 7am–7pm | Emergency: 24/7</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Smith" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option>Roof Repair</option>
+            <option>Roof Replacement</option>
+            <option>New Installation</option>
+            <option>Leak Detection</option>
+            <option>Inspection</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about your project..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Get Started?</h2>
+  <p>Call us today for your free estimate. No obligation, no pressure.</p>
+  <a href="tel:(201) 530-7467" class="cta-phone">(201) 530-7467</a>
+  <a href="tel:(201) 530-7467" class="btn-dark">Call Now — It's Free</a>
+</section>
+
+<footer>
+  <p><strong>NJ Home Design Studio</strong> | (201) 530-7467 | 1372 Teaneck Rd, Teaneck, NJ 07666, USA</p>
+  <p style="margin-top:8px">© 2026 NJ Home Design Studio. All rights reserved.</p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  alert('Thank you! We will contact you shortly to confirm your free estimate.');
+  e.target.reset();
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
